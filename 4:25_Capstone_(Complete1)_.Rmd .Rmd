@@ -1,9 +1,12 @@
-title: "README"
+---
+title: "Wine Quality Analysis"
+author: "Anthony Cuccia, Kasey Cohen, Cole Moore"
 output:
- github_document:
- pandoc_args: ["--wrap=none"]
+  github_document:
+    pandoc_args: ["--wrap=none"]
 always_allow_html: true
 ---
+
 
 ## Business Understanding
 Good quality wine is typically characterized by a balance of several factors including acidity, tannins, alcohol content, sweetness, and the wine's overall structure. Wine quality is often judged by consumers based on taste preferences, which may vary by region, culture, and even personal preference. Generally, higher-quality wines tend to have well-balanced acidity and alcohol levels, appropriate residual sugar content, and fewer defects, such as high volatile acidity. Wine ratings, like those used in this dataset, are often influenced by expert panels and consumer reviews, which typically rate the wines on a scale (e.g., 1-10). Factors such as the vineyard’s terroir (environmental factors), the grape variety, and production techniques such as fermentation temperature and time, also play significant roles in determining the final quality.
