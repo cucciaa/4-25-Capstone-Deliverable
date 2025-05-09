@@ -1,13 +1,20 @@
 ---
-title: "Wine Quality Analysis"
-author: "Anthony Cuccia, Kasey Cohen, Cole Moore"
-date: "`r Sys.Date()`"
+title: "README"
 output:
-  html_document:
-    pandoc_args: ["--wrap=none"]
+ github_document:
+ pandoc_args: ["--wrap=none"]
 always_allow_html: true
 ---
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE,
+  message = FALSE,
+  warning = FALSE,
+  fig.width = 7,
+  fig.height = 5
+)
+```
 
 ## Business Understanding
 Good quality wine is typically characterized by a balance of several factors including acidity, tannins, alcohol content, sweetness, and the wine's overall structure. Wine quality is often judged by consumers based on taste preferences, which may vary by region, culture, and even personal preference. Generally, higher-quality wines tend to have well-balanced acidity and alcohol levels, appropriate residual sugar content, and fewer defects, such as high volatile acidity. Wine ratings, like those used in this dataset, are often influenced by expert panels and consumer reviews, which typically rate the wines on a scale (e.g., 1-10). Factors such as the vineyard’s terroir (environmental factors), the grape variety, and production techniques such as fermentation temperature and time, also play significant roles in determining the final quality.
@@ -38,17 +45,10 @@ Ordinal: Quality
 This dataset has no missing values and consists of 6,497 instances from both red and white wines, providing a sufficient sample for analysis.
 
 ## Purpose
-> We needed to extract some “actionable” insights from the UCI Wine Quality Data Set . The purpose is that a wine producer has hired us to better understand what factors affect wine quality. The producer can also look at which production factors have an effect on rating scores by consumers. The reason why we utilized exploratory data analysis is show different distributions of certain production techniques and why consumers probably favor one type of wine over the other.
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(
-  echo = TRUE,
-  message = FALSE,
-  warning = FALSE,
-  fig.width = 7,
-  fig.height = 5
-)
-```
+We needed to extract some “actionable” insights from the UCI Wine Quality Data Set . The purpose is that a wine producer has hired us to better understand what factors affect wine quality. The producer can also look at which production factors have an effect on rating scores by consumers. The reason why we utilized exploratory data analysis is show different distributions of certain production techniques and why consumers probably favor one type of wine over the other.
+
+
 
 ## Loading and Installing the Required Packages and Data Loading and Merging
 ```{r load-packages}
