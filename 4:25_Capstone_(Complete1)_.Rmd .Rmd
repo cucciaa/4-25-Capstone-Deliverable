@@ -1,6 +1,7 @@
 ---
 title: "Wine Quality Analysis"
 author: "Anthony Cuccia, Kasey Cohen, Cole Moore"
+date: "`r Sys.Date()`"
 output:
   github_document:
     pandoc_args: ["--wrap=none"]
