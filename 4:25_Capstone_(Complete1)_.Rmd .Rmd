@@ -207,7 +207,35 @@ par(mfrow = c(1,1))
 ### T-Test for Mean Quality
 ```{r t-test-quality}
 ttest <- t.test(quality ~ type, data = data)
-tidy(ttest)
+tidy(ttest) 
+# 2. Pearson correlation: Alcohol vs. Quality
+pearson_red   <- cor.test(data[data$type=="red",   "alcohol"],
+                          data[data$type=="red",   "quality"])
+pearson_white <- cor.test(data[data$type=="white", "alcohol"],
+                          data[data$type=="white", "quality"])
+list(
+  red   = broom::tidy(pearson_red),
+  white = broom::tidy(pearson_white)
+)
+
+# 3. Wilcoxon rank-sum test for ordinal quality
+wilcox_res <- wilcox.test(quality ~ type,
+                          data     = data,
+                          exact    = FALSE,
+                          conf.int = TRUE)
+broom::tidy(wilcox_res)
+
+# 4. Spearman’s rank correlation: Alcohol vs. Quality
+spearman_red   <- cor.test(data[data$type=="red",   "alcohol"],
+                           data[data$type=="red",   "quality"],
+                           method = "spearman")
+spearman_white <- cor.test(data[data$type=="white", "alcohol"],
+                           data[data$type=="white", "quality"],
+                           method = "spearman")
+list(
+  red   = broom::tidy(spearman_red),
+  white = broom::tidy(spearman_white)
+)
 ```
 > The purpose of this is to run a two-sample t-test comparing the means of white and red wine. Estimate one represents the mean quality red wine while Estimate 2 represents the mean quality of white wine. As shown, white wine has a higher mean quality proving that white wine is favored more by consumers.
 
