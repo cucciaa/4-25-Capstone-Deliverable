@@ -1,6 +1,5 @@
-README
-================
 
+<<<<<<< HEAD:4-25_Capstone_-Complete1-_.Rmd-.md
 ## Business Understanding
 
 Good quality wine is typically characterized by a balance of several
@@ -552,3 +551,5 @@ list(
 > a higher ph level. In conclusion the observation can be definite is
 > that white wine producers should stick to sweeter wines while red wine
 > producers should stick to a higher level ph method of making wine.
+=======
+>>>>>>> 651150c40d0ee854b186408697996a1819ede5a8:README.md
