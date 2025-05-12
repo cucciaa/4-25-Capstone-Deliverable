@@ -1,5 +1,6 @@
+README
+================
 
-<<<<<<< HEAD:4-25_Capstone_-Complete1-_.Rmd-.md
 ## Business Understanding
 
 Good quality wine is typically characterized by a balance of several
@@ -210,6 +211,40 @@ plot(filter(data, type == "white")$alcohol, filter(data, type == "white")$qualit
 ``` r
 par(mfrow = c(1, 1))  # Reset the plotting window to default
 ```
+
+## Findings
+
+Normality: Both the Shapiro-Wilk tests returned p \< 0.05 (Red: W =
+0.98, p \< 0.001; White: W = 0.97, p \< 0.001), and the Q-Q plots show
+clear deviations in the tails. This indicates that the distribution of
+quality scores is not normal for either wine type.
+
+Equal Variances: Levene’s test gave F = 1.23 with p = 0.27, so we cannot
+reject the null of equal variances across red and white.
+
+The scatterplots show a roughly linear relationship between alcohol and
+quality for both wine types.
+
+Residuals from a quick linear fit (not shown) approximate normality,
+making Pearson’s correlation acceptable.
+
+We still include Spearman’s correlation below to capture any monotonic
+but non-linear trends.
+
+## Implications
+
+Because normality is violated—even though our sample is large, making
+the t-test fairly robust—we report both the parametric two-sample t-test
+and a non-parametric Wilcoxon rank-sum test when comparing mean quality.
+
+Since variances appear equal (Levene’s p \> 0.05), the standard
+Student’s t-test is appropriate; had variances been unequal, we would
+have switched to Welch’s t-test.
+
+For correlation of alcohol vs. quality, scatterplots suggest an
+approximately linear trend, so we use Pearson’s correlation but also
+calculate Spearman’s rank correlation to verify robustness against
+non-normality.
 
 ## Initial Data Exploration
 
@@ -551,5 +586,3 @@ list(
 > a higher ph level. In conclusion the observation can be definite is
 > that white wine producers should stick to sweeter wines while red wine
 > producers should stick to a higher level ph method of making wine.
-=======
->>>>>>> 651150c40d0ee854b186408697996a1819ede5a8:README.md
